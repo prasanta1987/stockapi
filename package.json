@@ -1,0 +1,25 @@
+{
+  "name": "stockapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasanta1987/stockapi.git"
+  },
+  "author": "PK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prasanta1987/stockapi/issues"
+  },
+  "homepage": "https://github.com/prasanta1987/stockapi#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "node-html-parser": "^1.2.20"
+  }
+}
