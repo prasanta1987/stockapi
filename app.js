@@ -5,12 +5,6 @@ var HTMLParser = require('node-html-parser');
 const symbol = require('./indexSymbols')
 
 
-
-// require('events').EventEmitter.defaultMaxListeners = 0
-
-// https://www.nse-india.com/api/historical/cm/equity?symbol=SHREECEM&series=[%22EQ%22]&from=26-06-2020&to=26-06-2020
-// https://www.nse-india.com/api/chart-databyindex?index=TATASTEELEQN&preopen=true
-
 const app = express()
 
 app.get('/findNseSymbol/:name', (req, res) => {
@@ -137,6 +131,6 @@ app.get('/historicalData/:symbol', (req, res) => {
 })
 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 80
 
 app.listen(port, () => console.log(`Server Running at http://localhost:${port}`))
