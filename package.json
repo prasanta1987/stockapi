@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
-    "node-html-parser": "^1.2.20"
+    "node-html-parser": "^1.2.20",
+    "request": "^2.81.0"
   }
 }

@@ -1,8 +1,10 @@
 const express = require('express')
 const axios = require("axios").default;
 var HTMLParser = require('node-html-parser');
+const requests = require('request')
 
-const symbol = require('./indexSymbols')
+const symbol = require('./indexSymbols');
+const { request } = require('express');
 
 
 const app = express()
@@ -131,11 +133,14 @@ app.get('/historicalData/:symbol', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.status(200).json({
-        message: "Successful"
-    })
+
+
+    axios.get('https://www.nseindia.com/api/quote-equity?symbol=SBIN')
+        .then(data => res.status(200).json(data.data))
+        .catch(err => res.status(500).json(err))
+
 })
 
-const port = process.env.PORT || 80
+const port = process.env.PORT || 3000
 
 app.listen(port, () => console.log(`Server Running at http://localhost:${port}`))
