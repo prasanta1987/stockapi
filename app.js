@@ -130,6 +130,11 @@ app.get('/historicalData/:symbol', (req, res) => {
 
 })
 
+app.get('/', (req, res) => {
+    res.status(200).json({
+        message: "Successful"
+    })
+})
 
 const port = process.env.PORT || 80
 
