@@ -135,9 +135,14 @@ app.get('/historicalData/:symbol', (req, res) => {
 app.get('/', (req, res) => {
 
 
-    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    axios.get('https://www.nseindia.com/api/quote-equity?symbol=SBIN', {
+        headers: {
+
+        }
+    })
         .then(data => res.status(200).json(data.data))
         .catch(err => res.status(500).json(err))
+
 })
 
 const port = process.env.PORT || 3000
