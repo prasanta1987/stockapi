@@ -59,11 +59,7 @@ app.get('/candleData/:symbol', (req, res) => {
 })
 
 
-<<<<<<< HEAD
-app.post('/historicalData/:symbol/:fromDate/:toDate', (req, res) => {
-=======
 app.get('/historicalData/:symbol/:fromDate/:toDate', (req, res) => {
->>>>>>> 3107e154a5207585dc4372e9145540bacc40b764
 
     let symb = (req.params.symbol).toLowerCase()
     symb = symb.replace('&', '%26')
@@ -152,15 +148,8 @@ app.get('/historicalData/:symbol/:fromDate/:toDate', (req, res) => {
                 })
         })
         .catch(err => console.log(err))
-<<<<<<< HEAD
-=======
+    })
 
-
->>>>>>> 3107e154a5207585dc4372e9145540bacc40b764
-
-
-<<<<<<< HEAD
-=======
 
 app.get('/', (req, res) => {
 
@@ -184,7 +173,6 @@ app.get('/', (req, res) => {
     })
         .then(data => res.status(200).json(data.data))
         .catch(err => res.status(500).json(err))
->>>>>>> 3107e154a5207585dc4372e9145540bacc40b764
 
 })
 
