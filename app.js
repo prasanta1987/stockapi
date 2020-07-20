@@ -59,7 +59,7 @@ app.get('/candleData/:symbol', (req, res) => {
 })
 
 
-app.get('/historicalData/:symbol/:fromDate/:toDate', (req, res) => {
+app.post('/historicalData/:symbol/:fromDate/:toDate', (req, res) => {
 
     let symb = (req.params.symbol).toLowerCase()
     symb = symb.replace('&', '%26')
